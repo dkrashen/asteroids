@@ -194,8 +194,8 @@ Sprite = function () {
   };
   this.updateGrid = function () {
     if (!this.visible) return;
-    var gridx = Math.floor(this.x / GRID_SIZE);
-    var gridy = Math.floor(this.y / GRID_SIZE);
+    var gridx = Math.floor(this.x / (0.5*GRID_SIZE));
+    var gridy = Math.floor(this.y / (0.5*GRID_SIZE));
     gridx = (gridx >= this.grid.length) ? 0 : gridx;
     gridy = (gridy >= this.grid[0].length) ? 0 : gridy;
     gridx = (gridx < 0) ? this.grid.length-1 : gridx;
