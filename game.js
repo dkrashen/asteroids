@@ -410,6 +410,11 @@ Ship = function () {
       this.acc.x = 0.5 * Math.cos(rad);
       this.acc.y = 0.5 * Math.sin(rad);
       this.children.exhaust.visible = Math.random() > 0.1;
+    } else if (KEY_STATUS.down) {
+      var rad = ((this.rot-90) * Math.PI)/180;
+      this.acc.x = -0.5 * Math.cos(rad);
+      this.acc.y = -0.5 * Math.sin(rad);
+      this.children.exhaust.visible = false;
     } else {
       this.acc.x = 0;
       this.acc.y = 0;
